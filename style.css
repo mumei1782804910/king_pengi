@@ -161,10 +161,10 @@ h1 {
 }
 .cell.alt { background: #def1fb; }
 .cell.block {
-  background: linear-gradient(160deg, var(--block-hi) 20%, var(--block-lo));
-  box-shadow: inset 0 -4px 0 var(--block-edge), inset 0 2px 2px #fff,
-    0 2px 4px rgba(15, 61, 92, 0.3);
-  border-radius: 8px;
+  background: linear-gradient(160deg, #ffffff 8%, #a5d0ec 65%, #8cbcda);
+  box-shadow: inset 0 -5px 0 #6f9fc2, inset 0 2px 2px #fff,
+    0 3px 6px rgba(15, 61, 92, 0.4);
+  border-radius: 9px;
 }
 .cell.hole, .cell.cracked.broken {
   background: radial-gradient(circle at 50% 40%, #2a6088 0%, var(--sea-deep) 75%);

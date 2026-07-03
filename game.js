@@ -8,26 +8,31 @@
   /* ---------- SVG art ---------- */
   const PENGI_SVG = `
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="pengi-inner">
-  <ellipse cx="24" cy="74" rx="9" ry="17" fill="#aeb9c4" transform="rotate(20 24 74)"/>
-  <ellipse cx="96" cy="74" rx="9" ry="17" fill="#aeb9c4" transform="rotate(-20 96 74)"/>
-  <ellipse cx="47" cy="106" rx="10" ry="5.5" fill="#7f8b97"/>
-  <ellipse cx="73" cy="106" rx="10" ry="5.5" fill="#7f8b97"/>
-  <ellipse cx="60" cy="74" rx="33" ry="31" fill="#c6d0d9"/>
-  <ellipse cx="60" cy="79" rx="22" ry="22" fill="#f7fafc"/>
-  <path d="M39 54 Q60 67 81 54 L81 63 Q60 76 39 63 Z" fill="#f6a01f"/>
-  <circle cx="60" cy="38" r="24" fill="#23262e"/>
-  <ellipse cx="60" cy="44" rx="17" ry="13" fill="#f7fafc"/>
-  <circle cx="52.5" cy="42" r="4.4" fill="#1d3557"/>
-  <circle cx="67.5" cy="42" r="4.4" fill="#1d3557"/>
-  <circle cx="54" cy="40.5" r="1.5" fill="#fff"/>
-  <circle cx="69" cy="40.5" r="1.5" fill="#fff"/>
-  <path d="M55.5 48.5 L64.5 48.5 L60 55 Z" fill="#f2b56b"/>
-  <g transform="rotate(-14 41 15)">
-    <path d="M30 23 L32 11 L38 18 L43 9 L48 18 L54 11 L56 23 Z"
-      fill="#f4c542" stroke="#c9992a" stroke-width="1.6" stroke-linejoin="round"/>
-    <circle cx="32" cy="10" r="2.2" fill="#f4c542" stroke="#c9992a"/>
-    <circle cx="43" cy="8" r="2.2" fill="#f4c542" stroke="#c9992a"/>
-    <circle cx="54" cy="10" r="2.2" fill="#f4c542" stroke="#c9992a"/>
+  <path d="M60 12 C90 12 102 40 102 72 C102 100 84 112 60 112 C36 112 18 100 18 72 C18 40 30 12 60 12 Z" fill="#ccd6de"/>
+  <ellipse cx="47" cy="112" rx="9" ry="4.5" fill="#f2b56b"/>
+  <ellipse cx="73" cy="112" rx="9" ry="4.5" fill="#f2b56b"/>
+  <ellipse cx="16" cy="76" rx="7" ry="12" fill="#b3bfc9" transform="rotate(20 16 76)"/>
+  <ellipse cx="104" cy="76" rx="7" ry="12" fill="#b3bfc9" transform="rotate(-20 104 76)"/>
+  <ellipse cx="60" cy="88" rx="26" ry="19" fill="#ffffff"/>
+  <path d="M60 12 C90 12 102 40 101 64 Q80 56 60 56 Q40 56 19 64 C18 40 30 12 60 12 Z" fill="#23262e"/>
+  <ellipse cx="60" cy="42" rx="23" ry="15.5" fill="#ffffff"/>
+  <circle cx="50" cy="41" r="6.2" fill="#1d3557"/>
+  <circle cx="70" cy="41" r="6.2" fill="#1d3557"/>
+  <circle cx="52.3" cy="38.7" r="2.3" fill="#fff"/>
+  <circle cx="72.3" cy="38.7" r="2.3" fill="#fff"/>
+  <circle cx="48" cy="43.6" r="1.1" fill="#fff" opacity="0.9"/>
+  <circle cx="68" cy="43.6" r="1.1" fill="#fff" opacity="0.9"/>
+  <ellipse cx="43" cy="48" rx="4.4" ry="2.7" fill="#ffb3c1" opacity="0.85"/>
+  <ellipse cx="77" cy="48" rx="4.4" ry="2.7" fill="#ffb3c1" opacity="0.85"/>
+  <path d="M56.5 47.5 L63.5 47.5 L60 53 Z" fill="#f5a25c"/>
+  <path d="M32 58 Q60 72 88 58 L88 68 Q60 82 32 68 Z" fill="#f6a01f"/>
+  <path d="M84 64 q8 2 6 10 q-7 0 -9 -7 Z" fill="#e8920e"/>
+  <g transform="rotate(-12 42 10)">
+    <path d="M32 18 L34 7 L39.5 13.5 L44 5 L48.5 13.5 L54 7 L56 18 Z"
+      fill="#f4c542" stroke="#c9992a" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="34" cy="6" r="2" fill="#f4c542" stroke="#c9992a"/>
+    <circle cx="44" cy="4" r="2" fill="#f4c542" stroke="#c9992a"/>
+    <circle cx="54" cy="6" r="2" fill="#f4c542" stroke="#c9992a"/>
   </g>
 </svg>`;
 
@@ -53,7 +58,7 @@
   const CRACK_SVG = `
 <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
   <path d="M20 3 L17 12 L22 19 L15 26 L19 37 M22 19 L31 22 M17 12 L7 15 M15 26 L5 30 M31 22 L37 31"
-    stroke="#7fa8c0" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+    stroke="#5f8fae" stroke-width="2.4" fill="none" stroke-linecap="round"/>
 </svg>`;
 
   /* ---------- save data ---------- */
