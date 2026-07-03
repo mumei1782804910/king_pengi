@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#7fc5e6">
+  <title>Pengi's Ice Slide</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2323262e'/><ellipse cx='50' cy='60' rx='30' ry='26' fill='%23f7fafc'/></svg>">
+</head>
+<body>
+
+  <section id="screen-home" class="screen active">
+    <div class="home-inner">
+      <div id="home-pengi" class="pengi-hero"></div>
+      <h1>Pengi's<br>Ice Slide</h1>
+      <p class="tagline">Swipe to slide. Grab the fish.<br>Get home to the igloo!</p>
+      <button id="btn-play" class="btn primary big">Play</button>
+    </div>
+  </section>
+
+  <section id="screen-levels" class="screen">
+    <header class="topbar">
+      <button class="btn icon" data-nav="screen-home" aria-label="Back">&#8592;</button>
+      <h2>Levels</h2>
+      <span class="total-stars" id="total-stars"></span>
+    </header>
+    <div id="level-grid"></div>
+  </section>
+
+  <section id="screen-game" class="screen">
+    <header class="topbar">
+      <button class="btn icon" data-nav="screen-levels" aria-label="Levels">&#8592;</button>
+      <div class="level-title">
+        <h2 id="game-level-name"></h2>
+        <span id="game-moves"></span>
+      </div>
+      <div class="hud-actions">
+        <button id="btn-undo" class="btn icon" aria-label="Undo">&#10554;</button>
+        <button id="btn-restart" class="btn icon" aria-label="Restart">&#8635;</button>
+        <button id="btn-sound" class="btn icon" aria-label="Sound"></button>
+      </div>
+    </header>
+    <div id="board-wrap">
+      <div id="board"></div>
+    </div>
+    <p id="hint-bar"></p>
+    <div id="toast"></div>
+  </section>
+
+  <div id="win-overlay" class="overlay hidden">
+    <div class="win-card">
+      <div id="win-pengi" class="pengi-hero small celebrate"></div>
+      <h2>Level Clear!</h2>
+      <div id="win-stars" class="stars-row"></div>
+      <p id="win-detail"></p>
+      <div class="win-buttons">
+        <button id="btn-win-replay" class="btn">Replay</button>
+        <button id="btn-win-levels" class="btn">Levels</button>
+        <button id="btn-win-next" class="btn primary">Next &#9654;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="engine.js"></script>
+  <script src="levels.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
