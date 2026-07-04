@@ -3,8 +3,8 @@
 A mobile-friendly ice-sliding logic puzzle. Swipe to slide Pengi across the ice —
 he only stops when he hits something. Collect every fish, then get home to the igloo.
 
-- **20 handcrafted levels**, each verified solvable by a BFS solver, with difficulty
-  rising from 1 to 12 optimal moves.
+- **40 handcrafted levels**, each verified solvable by a BFS solver, with difficulty
+  rising from 1 to 18 optimal moves across two chapters of 20.
 - **Mechanics:** ice blocks, holes (icy bath!), cracked ice that breaks behind you,
   and the igloo itself as a stopper you can use tactically.
 - **1–3 stars** per level based on the true optimal move count, undo/restart,

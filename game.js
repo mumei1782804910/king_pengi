@@ -6,34 +6,53 @@
   const $ = (sel) => document.querySelector(sel);
 
   /* ---------- SVG art ---------- */
-  const PENGI_SVG = `
+  const pengiSvg = (uid) => `
 <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="pengi-inner">
-  <path d="M60 12 C90 12 102 40 102 72 C102 100 84 112 60 112 C36 112 18 100 18 72 C18 40 30 12 60 12 Z" fill="#ccd6de"/>
-  <ellipse cx="47" cy="112" rx="9" ry="4.5" fill="#f2b56b"/>
-  <ellipse cx="73" cy="112" rx="9" ry="4.5" fill="#f2b56b"/>
-  <ellipse cx="16" cy="76" rx="7" ry="12" fill="#b3bfc9" transform="rotate(20 16 76)"/>
-  <ellipse cx="104" cy="76" rx="7" ry="12" fill="#b3bfc9" transform="rotate(-20 104 76)"/>
-  <ellipse cx="60" cy="88" rx="26" ry="19" fill="#ffffff"/>
-  <path d="M60 12 C90 12 102 40 101 64 Q80 56 60 56 Q40 56 19 64 C18 40 30 12 60 12 Z" fill="#23262e"/>
-  <ellipse cx="60" cy="42" rx="23" ry="15.5" fill="#ffffff"/>
-  <circle cx="50" cy="41" r="6.2" fill="#1d3557"/>
-  <circle cx="70" cy="41" r="6.2" fill="#1d3557"/>
-  <circle cx="52.3" cy="38.7" r="2.3" fill="#fff"/>
-  <circle cx="72.3" cy="38.7" r="2.3" fill="#fff"/>
-  <circle cx="48" cy="43.6" r="1.1" fill="#fff" opacity="0.9"/>
-  <circle cx="68" cy="43.6" r="1.1" fill="#fff" opacity="0.9"/>
-  <ellipse cx="43" cy="48" rx="4.4" ry="2.7" fill="#ffb3c1" opacity="0.85"/>
-  <ellipse cx="77" cy="48" rx="4.4" ry="2.7" fill="#ffb3c1" opacity="0.85"/>
-  <path d="M56.5 47.5 L63.5 47.5 L60 53 Z" fill="#f5a25c"/>
-  <path d="M32 58 Q60 72 88 58 L88 68 Q60 82 32 68 Z" fill="#f6a01f"/>
-  <path d="M84 64 q8 2 6 10 q-7 0 -9 -7 Z" fill="#e8920e"/>
-  <g transform="rotate(-12 42 10)">
-    <path d="M32 18 L34 7 L39.5 13.5 L44 5 L48.5 13.5 L54 7 L56 18 Z"
-      fill="#f4c542" stroke="#c9992a" stroke-width="1.5" stroke-linejoin="round"/>
-    <circle cx="34" cy="6" r="2" fill="#f4c542" stroke="#c9992a"/>
-    <circle cx="44" cy="4" r="2" fill="#f4c542" stroke="#c9992a"/>
-    <circle cx="54" cy="6" r="2" fill="#f4c542" stroke="#c9992a"/>
-  </g>
+  <defs>
+    <linearGradient id="pgHead-${uid}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b6069"/><stop offset="1" stop-color="#3c414a"/>
+    </linearGradient>
+    <linearGradient id="pgBib-${uid}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f9ca4f"/><stop offset="1" stop-color="#eb9e1d"/>
+    </linearGradient>
+    <linearGradient id="pgBody-${uid}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d3d8dd"/><stop offset="1" stop-color="#c2c8cf"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="19" cy="80" rx="8.5" ry="16" fill="#b0b7bf" stroke="#848b94" stroke-width="1.6" transform="rotate(16 19 80)"/>
+  <ellipse cx="101" cy="80" rx="8.5" ry="16" fill="#b0b7bf" stroke="#848b94" stroke-width="1.6" transform="rotate(-16 101 80)"/>
+  <path d="M39 107 Q36 116 43.5 116.5 L52 116.5 Q56.5 116 54.5 108.5 Q50 105.5 45.5 105.8 Q41 106 39 107 Z" fill="#3c4149"/>
+  <path d="M44.5 116.3 L45.5 108.8 M49.5 116.3 L50 108.6" stroke="#23262c" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M81 107 Q84 116 76.5 116.5 L68 116.5 Q63.5 116 65.5 108.5 Q70 105.5 74.5 105.8 Q79 106 81 107 Z" fill="#3c4149"/>
+  <path d="M75.5 116.3 L74.5 108.8 M70.5 116.3 L70 108.6" stroke="#23262c" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M60 26 C86 26 99 48 99 76 C99 101 82 113 60 113 C38 113 21 101 21 76 C21 48 34 26 60 26 Z" fill="url(#pgBody-${uid})" stroke="#7c848d" stroke-width="1.8"/>
+  <ellipse cx="60" cy="85" rx="27" ry="24" fill="#fdfeff"/>
+  <path d="M30 66 q3 10 10 15 M90 66 q-3 10 -10 15" stroke="#e4e8ec" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <path d="M41 61 Q60 73 79 61 Q83.5 70 76 76.5 L72 72.5 Q70 80.5 64.5 84.5 L62.5 79.5 Q61.5 87 60 90.5 Q58.5 87 57.5 79.5 L55.5 84.5 Q50 80.5 48 72.5 L44 76.5 Q36.5 70 41 61 Z" fill="url(#pgBib-${uid})" stroke="#d18e1d" stroke-width="1.4" stroke-linejoin="round"/>
+  <path d="M60 10 C81 10 92 26 92 44 C92 54.5 86 60 79.5 62.5 Q69 66 60 69 Q51 66 40.5 62.5 C34 60 28 54.5 28 44 C28 26 39 10 60 10 Z" fill="url(#pgHead-${uid})" stroke="#2e323a" stroke-width="1.8"/>
+  <ellipse cx="47" cy="44.5" rx="15.5" ry="14.5" fill="#fdfeff" transform="rotate(-6 47 44.5)"/>
+  <ellipse cx="73" cy="44.5" rx="15.5" ry="14.5" fill="#fdfeff" transform="rotate(6 73 44.5)"/>
+  <circle cx="47" cy="42.5" r="6.7" fill="#26334a"/>
+  <circle cx="73" cy="42.5" r="6.7" fill="#26334a"/>
+  <circle cx="47" cy="42.5" r="5.4" fill="#4278b8"/>
+  <circle cx="73" cy="42.5" r="5.4" fill="#4278b8"/>
+  <circle cx="47" cy="42.5" r="2.4" fill="#131c2a"/>
+  <circle cx="73" cy="42.5" r="2.4" fill="#131c2a"/>
+  <circle cx="45.1" cy="40.2" r="2" fill="#fff"/>
+  <circle cx="71.1" cy="40.2" r="2" fill="#fff"/>
+  <circle cx="49.2" cy="45.2" r="1" fill="#fff" opacity="0.9"/>
+  <circle cx="75.2" cy="45.2" r="1" fill="#fff" opacity="0.9"/>
+  <path d="M54.5 46 Q60 43.5 65.5 46 Q64.5 52 60 54.2 Q55.5 52 54.5 46 Z" fill="#d9993c" stroke="#a8752b" stroke-width="1.1" stroke-linejoin="round"/>
+  <path d="M46.5 13 L45 5.5 L51.5 9.5 L53.5 3.5 L58.5 8.5 L60 2.5 L61.5 8.5 L66.5 3.5 L68.5 9.5 L75 5.5 L73.5 13 Q60 17 46.5 13 Z" fill="#eebc3f" stroke="#bd8e26" stroke-width="1.3" stroke-linejoin="round"/>
+  <circle cx="45" cy="5" r="1.8" fill="#eebc3f" stroke="#bd8e26"/>
+  <circle cx="53.5" cy="3" r="1.8" fill="#eebc3f" stroke="#bd8e26"/>
+  <circle cx="60" cy="2" r="1.8" fill="#eebc3f" stroke="#bd8e26"/>
+  <circle cx="66.5" cy="3" r="1.8" fill="#eebc3f" stroke="#bd8e26"/>
+  <circle cx="75" cy="5" r="1.8" fill="#eebc3f" stroke="#bd8e26"/>
+  <path d="M48 14.5 Q60 17.8 72 14.5" stroke="#d9a832" stroke-width="1.2" fill="none"/>
+  <path d="M33 9 L33.8 11.2 L36 12 L33.8 12.8 L33 15 L32.2 12.8 L30 12 L32.2 11.2 Z" fill="#f2c94c"/>
+  <path d="M87 4 L88 6.7 L90.7 7.7 L88 8.7 L87 11.4 L86 8.7 L83.3 7.7 L86 6.7 Z" fill="#f2c94c"/>
+  <path d="M84 17 L84.6 18.6 L86.2 19.2 L84.6 19.8 L84 21.4 L83.4 19.8 L81.8 19.2 L83.4 18.6 Z" fill="#f2c94c"/>
 </svg>`;
 
   const FISH_SVG = `
@@ -122,8 +141,8 @@
     });
   });
 
-  $('#home-pengi').innerHTML = PENGI_SVG;
-  $('#win-pengi').innerHTML = PENGI_SVG;
+  $('#home-pengi').innerHTML = pengiSvg('home');
+  $('#win-pengi').innerHTML = pengiSvg('win');
   $('#btn-play').addEventListener('click', () => {
     buildLevelSelect();
     show('screen-levels');
@@ -208,7 +227,7 @@
     boardEl.appendChild(grid);
     const pengi = document.createElement('div');
     pengi.id = 'pengi';
-    pengi.innerHTML = PENGI_SVG;
+    pengi.innerHTML = pengiSvg('board');
     boardEl.appendChild(pengi);
   }
 
